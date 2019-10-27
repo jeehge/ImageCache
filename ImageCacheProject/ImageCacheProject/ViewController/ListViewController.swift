@@ -22,7 +22,7 @@ enum ItemMenu: CustomStringConvertible {
         case .diskCache:
             return "NSCache Disk Cache Example"
         case .memoryCache:
-            return "NSCache Disk Memory Example"
+            return "NSCache Memory Cache Example"
         }
     }
 }
