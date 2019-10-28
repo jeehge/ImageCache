@@ -8,6 +8,15 @@
 
 import UIKit
 
+class ImageCache {
+    static let shard: NSCache = { () -> NSCache<NSString, UIImage> in
+        let cache: NSCache<NSString, UIImage> = NSCache<NSString, UIImage>()
+        cache.name = "ImageCache"
+        return cache
+    }()
+}
+
+
 class MemoryCacheViewController: BaseViewController {
 
     // MARK: - Property
@@ -15,6 +24,7 @@ class MemoryCacheViewController: BaseViewController {
     @IBOutlet weak var secondImageView: UIImageView!
     
     // NSCache 생성
+    // static 안 붙여주면 얘는 싱클톤이 아님! 싱글톤으로 만들던가! 메모리에 올려두던가!
     static let memoryCache: NSCache = NSCache<NSString, UIImage>()
     
     private let firstStringURL: String = "https://raw.githubusercontent.com/jeehge/resume/master/Image/project_lunch.png"
