@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum ExampleName: Int {
-    case diskCache
-    case memoryCache
-}
-
 enum ItemMenu: CustomStringConvertible {
     case diskCache
     case memoryCache
@@ -60,15 +55,14 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case ExampleName.diskCache.rawValue:
+        // switch Int, String일 경우 default가 생김
+        switch items[indexPath.row] {
+        case .diskCache:
             let diskCacheVC = DiskCacheViewController.viewController(name: "Main")
             navigationController?.pushViewController(diskCacheVC, animated: true)
-        case ExampleName.memoryCache.rawValue:
+        case .memoryCache:
             let memoryCacheVC = MemoryCacheViewController.viewController(name: "Main")
             navigationController?.pushViewController(memoryCacheVC, animated: true)
-        default:
-            print("11")
         }
     }
     
