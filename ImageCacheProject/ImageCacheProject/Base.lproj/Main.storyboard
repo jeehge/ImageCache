@@ -61,14 +61,14 @@
                                 <rect key="frame" x="0.0" y="698.5" width="414" height="163.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cge-9q-3ha">
-                                        <rect key="frame" x="32" y="16" width="350" height="30"/>
+                                        <rect key="frame" x="150" y="16" width="114" height="30"/>
                                         <state key="normal" title="Image Download"/>
                                         <connections>
                                             <action selector="actionDownload:" destination="Yeq-Ir-OMN" eventType="touchUpInside" id="HGS-rQ-ycR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vN-Jf-7ct">
-                                        <rect key="frame" x="32" y="54" width="350" height="30"/>
+                                        <rect key="frame" x="189" y="54" width="36" height="30"/>
                                         <state key="normal" title="Clear"/>
                                         <connections>
                                             <action selector="actionClear:" destination="Yeq-Ir-OMN" eventType="touchUpInside" id="NoL-Ne-ncZ"/>
@@ -79,10 +79,6 @@
                                 <constraints>
                                     <constraint firstItem="9vN-Jf-7ct" firstAttribute="top" secondItem="cge-9q-3ha" secondAttribute="bottom" constant="8" id="D3p-fk-IeF"/>
                                     <constraint firstItem="9vN-Jf-7ct" firstAttribute="centerX" secondItem="MdV-ne-m0M" secondAttribute="centerX" id="Ezh-oa-sLb"/>
-                                    <constraint firstAttribute="trailing" secondItem="9vN-Jf-7ct" secondAttribute="trailing" constant="32" id="NMr-NX-Ra0"/>
-                                    <constraint firstItem="9vN-Jf-7ct" firstAttribute="leading" secondItem="MdV-ne-m0M" secondAttribute="leading" constant="32" id="b8u-uy-169"/>
-                                    <constraint firstItem="cge-9q-3ha" firstAttribute="leading" secondItem="MdV-ne-m0M" secondAttribute="leading" constant="32" id="fkp-MD-6R8"/>
-                                    <constraint firstAttribute="trailing" secondItem="cge-9q-3ha" secondAttribute="trailing" constant="32" id="oX4-KR-4am"/>
                                     <constraint firstItem="cge-9q-3ha" firstAttribute="top" secondItem="MdV-ne-m0M" secondAttribute="top" constant="16" id="pGk-kx-gxk"/>
                                     <constraint firstItem="cge-9q-3ha" firstAttribute="centerX" secondItem="MdV-ne-m0M" secondAttribute="centerX" id="xGN-he-yPw"/>
                                 </constraints>
@@ -178,14 +174,14 @@
                                 <rect key="frame" x="0.0" y="698.5" width="414" height="163.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5u-Ps-8n5">
-                                        <rect key="frame" x="32" y="16" width="350" height="30"/>
+                                        <rect key="frame" x="150" y="16" width="114" height="30"/>
                                         <state key="normal" title="Image Download"/>
                                         <connections>
                                             <action selector="actionDownload:" destination="Rfb-9n-I3S" eventType="touchUpInside" id="ZLF-BY-hzL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5N-An-U1G">
-                                        <rect key="frame" x="32" y="54" width="350" height="30"/>
+                                        <rect key="frame" x="189" y="54" width="36" height="30"/>
                                         <state key="normal" title="Clear"/>
                                         <connections>
                                             <action selector="actionClear:" destination="Rfb-9n-I3S" eventType="touchUpInside" id="EUD-8M-HRg"/>
@@ -195,13 +191,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="E5N-An-U1G" firstAttribute="top" secondItem="K5u-Ps-8n5" secondAttribute="bottom" constant="8" id="7Ug-Sx-wvf"/>
-                                    <constraint firstAttribute="trailing" secondItem="E5N-An-U1G" secondAttribute="trailing" constant="32" id="89u-HT-QJc"/>
                                     <constraint firstItem="E5N-An-U1G" firstAttribute="centerX" secondItem="5e6-Ml-rMV" secondAttribute="centerX" id="GPN-cD-Hd9"/>
                                     <constraint firstItem="K5u-Ps-8n5" firstAttribute="top" secondItem="5e6-Ml-rMV" secondAttribute="top" constant="16" id="Phf-T5-PIN"/>
                                     <constraint firstItem="K5u-Ps-8n5" firstAttribute="centerX" secondItem="5e6-Ml-rMV" secondAttribute="centerX" id="b4m-iK-8sA"/>
-                                    <constraint firstAttribute="trailing" secondItem="K5u-Ps-8n5" secondAttribute="trailing" constant="32" id="b5j-wl-lhD"/>
-                                    <constraint firstItem="K5u-Ps-8n5" firstAttribute="leading" secondItem="5e6-Ml-rMV" secondAttribute="leading" constant="32" id="ejp-7M-HjK"/>
-                                    <constraint firstItem="E5N-An-U1G" firstAttribute="leading" secondItem="5e6-Ml-rMV" secondAttribute="leading" constant="32" id="w3B-Ji-hkt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -245,14 +237,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6A-mv-59G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183" y="139"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="DQX-cR-cv1">
-            <objects>
-                <viewControllerPlaceholder id="bcA-FE-zaG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uOh-JQ-1PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="138" y="333"/>
         </scene>
     </scenes>
 </document>
