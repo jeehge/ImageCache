@@ -41,14 +41,13 @@ class MemoryCacheViewController: BaseViewController {
                     print("캐시된 이미지")
                     self?.firstImageView.image = firstCachedImage
                 } else {
+                    self?.firstImageView.image = image
                     /**
                      NSCache의 KeyType과 ObjectType은 모두 AnyObject로 제약이 걸려있음
                      그래서 Key는 NSString (String은 Struct이기 때문에 Class 타입인 NSString로 설정), Object는 UIImage로 설정
                      그리고 Data를 받아온 부분에서 이 Cache에 object를 set
                     */
                     self?.memoryCache.setObject(image, forKey: "FirstImage")
-                    self?.firstImageView.image = image
-                    
                 }
             }
         }.resume()
