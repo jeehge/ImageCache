@@ -15,7 +15,7 @@ class MemoryCacheViewController: BaseViewController {
     @IBOutlet weak var secondImageView: UIImageView!
     
     // NSCache 생성
-    let memoryCache = NSCache<NSString, UIImage>()
+    static let memoryCache: NSCache = NSCache<NSString, UIImage>()
     
     private let firstStringURL: String = "https://raw.githubusercontent.com/jeehge/resume/master/Image/project_lunch.png"
     private let secondStringURL: String = "https://raw.githubusercontent.com/jeehge/resume/master/Image/lunch_icon.png"
@@ -29,7 +29,7 @@ class MemoryCacheViewController: BaseViewController {
     // MARK: - IBAction
     @IBAction func actionDownload(_ sender: UIButton) {
         // Cache가 존재하는지를 체크하고 없다면 이미지를 불러와 Caching하는 과정을 추가
-        if let firstCachedImage = self.memoryCache.object(forKey: "FirstImage") {
+        if let firstCachedImage = MemoryCacheViewController.memoryCache.object(forKey: "FirstImage") {
             print("캐시에 이미지가 존재합니다")
             self.firstImageView.image = firstCachedImage
         } else {
@@ -48,7 +48,7 @@ class MemoryCacheViewController: BaseViewController {
                  그래서 Key는 NSString (String은 Struct이기 때문에 Class 타입인 NSString로 설정), Object는 UIImage로 설정
                  그리고 Data를 받아온 부분에서 이 Cache에 object를 set
                 */
-                self?.memoryCache.setObject(image, forKey: "FirstImage")
+                MemoryCacheViewController.memoryCache.setObject(image, forKey: "FirstImage")
             }.resume()
             
             

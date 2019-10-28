@@ -40,7 +40,7 @@ class DiskCacheViewController: BaseViewController {
         
         if !fileManager.fileExists(atPath: dataPath.path) {
             do {
-                print("디렉토리 생성")
+                print("경로를 생성합니다")
                 // 디렉토리 생성
                 try fileManager.createDirectory(atPath: dataPath.path, withIntermediateDirectories: false, attributes: nil)
             } catch let error {
