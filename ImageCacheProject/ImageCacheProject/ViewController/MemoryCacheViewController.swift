@@ -38,7 +38,7 @@ class MemoryCacheViewController: BaseViewController {
             DispatchQueue.main.async { [weak self] in
                 // Cache가 존재하는지를 체크하고 없다면 이미지를 불러와 Caching하는 과정을 추가
                 if let firstCachedImage = self?.memoryCache.object(forKey: "FirstImage") {
-                    print("캐시된 이미지")
+                    print("캐시에 이미지가 존재합니다")
                     self?.firstImageView.image = firstCachedImage
                 } else {
                     self?.firstImageView.image = image

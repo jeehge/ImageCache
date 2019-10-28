@@ -35,14 +35,17 @@ class DiskCacheViewController: BaseViewController {
         // cache 디렉토리의 경로 저장
         // urls(for:in:): 메소드를 통해 특정 경로에 접근
         let cachesDirectory = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        // 해당 디렉토리 이름 지정
+        // 해당 디렉토리 이름 지정.
+        // /Library/Caches/DiskCache <- 경로를 dataPath 저장
         dataPath = cachesDirectory.appendingPathComponent("DiskCache")
-
-        if !fileManager.fileExists(atPath: dataPath!.path) {
+        
+        guard let path = dataPath?.path else { return }
+        
+        if !fileManager.fileExists(atPath: path) {
             do {
                 print("디렉토리 생성")
                 // 디렉토리 생성
-                try fileManager.createDirectory(atPath: dataPath!.path, withIntermediateDirectories: false, attributes: nil)
+                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: false, attributes: nil)
             } catch let error {
                 print("Error creating directory: \(error.localizedDescription)")
             }
@@ -57,10 +60,10 @@ class DiskCacheViewController: BaseViewController {
             guard let data = data else { return }
             let image = UIImage(data: data)!
             
-            let strPath = self.dataPath!.appendingPathComponent("ImageText.jpg")
+            guard let strPath = self.dataPath?.appendingPathComponent("project_lunch.png") else { return }
             
             if self.fileManager.fileExists(atPath: strPath.path) {
-                print("캐시이미지 존재 ")
+                print("캐시에 이미지가 존재합니다")
                 do {
                     let data = try Data(contentsOf: strPath)
                     let image = UIImage(data: data)
