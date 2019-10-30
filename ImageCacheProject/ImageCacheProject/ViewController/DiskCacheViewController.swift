@@ -51,7 +51,7 @@ class DiskCacheViewController: BaseViewController {
         let strPath = dataPath.appendingPathComponent("project_lunch.png")
         
         if fileManager.fileExists(atPath: strPath.path) {
-            print("캐시에 이미지가 존재합니다")
+            print("디스크 캐시에 이미지가 존재합니다")
             do {
                 let data = try Data(contentsOf: strPath)
                 let image = UIImage(data: data)
