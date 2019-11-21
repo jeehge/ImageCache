@@ -58,10 +58,10 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
         // switch Int, String일 경우 default가 생김
         switch items[indexPath.row] {
         case .diskCache:
-            let diskCacheVC = DiskCacheViewController.viewController(name: "Main")
+            let diskCacheVC = DiskCacheViewController.viewController(from: "Main")
             navigationController?.pushViewController(diskCacheVC, animated: true)
         case .memoryCache:
-            let memoryCacheVC = MemoryCacheViewController.viewController(name: "Main")
+            let memoryCacheVC = MemoryCacheViewController.viewController(from: "Main")
             navigationController?.pushViewController(memoryCacheVC, animated: true)
         }
     }
