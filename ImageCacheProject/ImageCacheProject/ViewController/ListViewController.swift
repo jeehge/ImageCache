@@ -65,6 +65,4 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(memoryCacheVC, animated: true)
         }
     }
-    
 }
-

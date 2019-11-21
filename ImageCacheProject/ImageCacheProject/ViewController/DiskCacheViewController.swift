@@ -24,6 +24,11 @@ class DiskCacheViewController: BaseViewController {
         
     }
     
+    // MARK: - Initalize
+    func initFilePath() {
+        
+    }
+    
     // MARK: - IBAction
     @IBAction func actionDownload(_ sender: UIButton) {
         // FileManager 인스턴스 생성. default 는 FileManager 싱글톤 인스턴스를 만들어줌
