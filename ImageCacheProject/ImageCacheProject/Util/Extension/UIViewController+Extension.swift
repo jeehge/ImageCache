@@ -11,8 +11,8 @@ import UIKit
 protocol ViewControllerFromStoryBoard{}
 
 extension ViewControllerFromStoryBoard where Self: UIViewController {
-    static func viewController(from storyboadName: String) -> Self {
-        guard let viewController: Self = UIStoryboard(name: storyboadName, bundle: nil)
+    static func viewController(from storyboardName: String) -> Self {
+        guard let viewController: Self = UIStoryboard(name: storyboardName, bundle: nil)
             .instantiateViewController(withIdentifier: String(describing: Self.self)) as? Self
             else { return Self() }
         return viewController
